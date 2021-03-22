@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="main.js"></script>
+    <script>
+
+function newSelect(arr, choice) {
+
+    let body = document.body;
+    let select = document.createElement('select');
+    document.body.append(select);
+    select.before('Выберите из списка: ');
+    
+    if (typeof(arr) === 'object') {
+        if (Array.isArray(arr) === true) {  
+            for (let i = 0; i < arr.length; i++) {
+                let option = document.createElement('option');
+                if (typeof(arr[i]) === 'object') {  /* Массив из объектов */
+                    option.innerHTML = arr[i].label;
+                    option.value = arr[i].value;
+                } else if (typeof(arr[i] === 'number'||'string')) { /* Массив примитивных значений */
+                    option.innerHTML = arr[i];
+                    option.value = arr[i];
+                }
+                select.append(option);
+                if (option.innerHTML === choice) {
+                        option.setAttribute('selected', true);
+                }
+            }
+        } else {  /* Объект */
+            let entries = Object.entries(arr);
+            for (let entry of entries) {
+                let option = document.createElement('option');
+                option.value = entry[0];
+                option.innerHTML = entry[1];
+                select.append(option);
+                if (option.innerHTML === choice) {
+                option.setAttribute('selected', true);
+                }   
+            }
+        }  
+        return select;
+    } else {
+        alert('Файл не поддерживается');
+    }
+};
+  
+newSelect(arr, "FIVE");
+
+    </script>
+</body>
+</html>
