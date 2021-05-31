@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <script defer src="js/inputmask.min.js"></script>
+  <script defer src="js/just-validate.min.js"></script>
+  <script defer src="js/script.js"></script>
+  <title>Сделай шаг к выздоровлению</title>
+</head>
+<body>
+  <section class="container">
+    <div class="logo">
+      <h1 class="logo__product-title">
+        Reduslim
+      </h1>
+      <h2 class="logo__product-title logo__product-title--bottom">
+        ECO
+      </h2>
+      <img class="logo__img" src="./img/logo.png" alt="Лого">
+    </div>
+    <form class="form" action="mail.php" enctype="multipart/form-data" method="POST">
+      <input type="hidden" name="admin_email[]" value="sqroull@yandex.ru">
+      <input type="hidden" name="form_subject" value="Заявка с сайта">
+      <h3 class="form__title">
+        Сделай шаг<br /> к выздоровлению
+      </h3>
+      <div class="form__wrapper">
+        <p class="form__input-title">Ваше <span class="form__input-color">имя</span></p>
+        <input class="form__input mb-2" placeholder="Алексей" type="text" name="name" aria-label="Введите Ваше имя">
+        <p class="form__input-title">Ваш <span class="form__input-color">телефон</span></p>
+        <div class="mb-2">
+          <input class="form__input form__input--tel" placeholder="+7 (123) 456 78-90" type="tel" data-validate-field="tel" name="tel">
+          <div class="drop form__input" id="dropWrapper">
+            <div class="drop__btn form__input-btn">RU</div>
+            <ul class="drop-list" id="dropList">
+              <li class="drop-list__item"><a href="https://google.com">EN</a></li>
+              <li class="drop-list__item"><a href="#">FR</a></li>
+              <li class="drop-list__item"><a href="#">DE</a></li>
+            </ul>
+          </div> 
+        </div>
+        <button class="form__btn" type="submit">Заказать<span class="form__btn-image"></span></button>
+      </div> 
+    </form>
+  </section>  
+  <footer class="footer">
+    <span class="footer__left">
+      Trusted
+    </span>
+    <span class="footer__center"></span>
+    <span class="footer__right">
+      Secure
+    </span>
+  </footer>
+</body>
+</html>
