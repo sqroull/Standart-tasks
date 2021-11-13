@@ -1,5 +1,5 @@
-- 👋 Hi, I’m @sqroull
+- 👋 Hi, I’m Alexander
 - 👀 I’m interested in Frontend development
 - 🌱 I’m currently learning JS, CSS, HTML
-- 📫 How to reach me. sqroull@iclod.com
+- 📫 How to reach me. sqroull@icloud.com or telegram: @sqroull 
 - This folder contains standart tasks of my study
